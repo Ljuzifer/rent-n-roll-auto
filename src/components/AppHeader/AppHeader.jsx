@@ -1,7 +1,10 @@
+import AppNav from "../AppNav/AppNav";
+
 export default function AppHeader() {
     return (
         <header>
-            <b>NAVIGATION</b>
+            <b>LOGO</b>
+            <AppNav />
         </header>
     );
 }
