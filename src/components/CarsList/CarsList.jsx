@@ -1,16 +1,15 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import { selectCars } from "../../redux/cars/carsSelectors";
+// import { useSelector } from "react-redux";
+// import { selectCars } from "../../redux/cars/carsSelectors";
 import { carsNumerator } from "../../utils/numerosityHelper";
 import CarsItem from "../CarsItem/CarsItem";
 import LoadButton from "../LoadButton/LoadButton";
 
 const AUTO_COUNT = 12;
 
-export default function CarsList() {
+export default function CarsList({ catalog }) {
     const [currentPage, setCurrentPage] = useState(1);
 
-    const catalog = useSelector(selectCars);
     const shownCars = currentPage * AUTO_COUNT;
 
     const loadMore = () => setCurrentPage((prevPage) => prevPage + 1);
@@ -28,3 +27,5 @@ export default function CarsList() {
         </>
     );
 }
+
+CarsList.propTypes;

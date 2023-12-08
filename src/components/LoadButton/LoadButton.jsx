@@ -1,11 +1,13 @@
+import { LoadMoreButton } from "./LoadButton.styled";
+
 export default function LoadButton({ loadMore }) {
     return (
-        <button
+        <LoadMoreButton
             style={{ display: "block", marginLeft: "auto", marginRight: "auto", marginBottom: "150px" }}
             type="button"
             onClick={loadMore}>
             Load more
-        </button>
+        </LoadMoreButton>
     );
 }
 

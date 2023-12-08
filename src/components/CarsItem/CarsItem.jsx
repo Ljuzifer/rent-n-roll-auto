@@ -3,9 +3,16 @@ import { useState } from "react";
 import { formatAddress, shortString } from "../../utils/formatHelper";
 import DefaultCar from "../../imgs/default-car.jpg";
 import ModalBox from "../Modal/Modal";
+import { FiHeart } from "react-icons/fi";
+import { IconHeart } from "./CarsItem.styled";
 
 export default function CarsItem({ car }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLiked, setIsLiked] = useState(false);
+
+    const handleHeartClick = () => {
+        setIsLiked(!isLiked);
+    };
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -24,11 +31,15 @@ export default function CarsItem({ car }) {
             <div style={{ width: "274px" }}>
                 <div
                     style={{
+                        position: "relative",
                         backgroundColor: "lightgrey",
                         width: "274px",
                         height: "268px",
                         borderRadius: "14px",
                     }}>
+                    <IconHeart isLiked={isLiked} onClick={handleHeartClick}>
+                        <FiHeart />
+                    </IconHeart>
                     <img
                         style={{ borderRadius: "14px", objectFit: "cover" }}
                         src={img || photoLink || DefaultCar}
