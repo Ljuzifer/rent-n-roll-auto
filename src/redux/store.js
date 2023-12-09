@@ -6,7 +6,7 @@ import { rootReducer } from "./rootReducer";
 const carsPersistConfig = {
     key: "cars",
     storage,
-    whitelist: ["favorites"],
+    blacklist: ["items", "filter", "isLoading", "error"],
 };
 
 const persistedReducer = persistReducer(carsPersistConfig, rootReducer);
