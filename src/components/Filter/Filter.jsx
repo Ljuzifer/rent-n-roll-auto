@@ -16,6 +16,7 @@ import {
     LabelInput,
     LabelName,
 } from "./Filter.styled";
+import { SectionContainer } from "../../GlobalStyle";
 
 export default function Filter({ cars }) {
     const filter = useSelector(selectFilter);
@@ -57,7 +58,7 @@ export default function Filter({ cars }) {
     };
 
     return (
-        <section>
+        <SectionContainer>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <FilterMainDiv>
                     <LabelInput>
@@ -105,7 +106,7 @@ export default function Filter({ cars }) {
                     </ButtonDiv>
                 </FilterMainDiv>
             </form>
-        </section>
+        </SectionContainer>
     );
 }
 

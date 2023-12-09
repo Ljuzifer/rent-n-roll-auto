@@ -23,12 +23,9 @@ const carsSlice = createSlice({
     initialState,
     reducers: {
         addToFavorites: (state, action) => {
-            // console.log(action.payload);
             const choisenCar = state.items.find((item) => item.id === action.payload.id);
-            // console.log(choisenCar);
             if (choisenCar) {
                 state.favorites.push(choisenCar);
-                // console.log(state.favorites);
             }
         },
 

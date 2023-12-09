@@ -24,6 +24,12 @@ export default function CarsList({ catalog }) {
                 ))}
             </ul>
             {catalog?.length > shownCars && <LoadButton loadMore={loadMore} />}
+
+            {catalog.length === 0 && (
+                <div>
+                    <b>Cars Not Found 😊 Try another options.</b>
+                </div>
+            )}
         </>
     );
 }

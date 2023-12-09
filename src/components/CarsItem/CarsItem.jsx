@@ -4,7 +4,7 @@ import { formatAddress, shortString } from "../../utils/formatHelper";
 import { delFromFavorites, addToFavorites } from "../../redux/cars/carsSlice";
 import { selectFavorites } from "../../redux/cars/carsSelectors";
 import ModalBox from "../Modal/Modal";
-import DefaultCar from "../../imgs/default-car.jpg";
+import auto from "../../imgs/default-car.jpg";
 import { FiHeart } from "react-icons/fi";
 import { AutoThumb, IconHeart, ImageThumb } from "./CarsItem.styled";
 
@@ -48,17 +48,21 @@ export default function CarsItem({ car }) {
                         />
                     </IconHeart>
                     <img
-                        src={img || photoLink || DefaultCar}
+                        src={img || photoLink || auto}
                         alt={`${make} ${model}`}
                         width="100%"
                         height="100%"
                         loading="lazy"
+                        // onError={(e) => {
+                        //     e.target.src = { auto };
+                        //     e.target.alt = `${make} ${model}`;
+                        // }}
                     />
                 </ImageThumb>
                 <div>
-                    <p>
+                    <h3>
                         {make} <span>{model}</span>, {year}
-                    </p>
+                    </h3>
                     <p>{rentalPrice}</p>
                 </div>
                 <div>

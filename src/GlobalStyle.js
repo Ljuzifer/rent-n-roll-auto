@@ -1,5 +1,5 @@
 import "modern-normalize";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -73,4 +73,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+`;
+
+export const SectionContainer = styled.section`
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 28px;
+    /* margin-left: auto;
+    margin-right: auto;
+    padding-left: 128px;
+    padding-right: 128px; */
 `;

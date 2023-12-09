@@ -8,7 +8,7 @@ export const AutoThumb = styled.div`
 export const ImageThumb = styled.div`
     position: relative;
     background-color: beige;
-    background-image: url("../../imgs/default-car.jpg");
+    /* background-image: url("../../imgs/default-car.jpg"); */
     width: 274px;
     height: 268px;
     border-radius: 14px;

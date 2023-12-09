@@ -2,6 +2,8 @@ import Modal from "react-modal";
 import DefaultCar from "../../imgs/default-car.jpg";
 import CompleteSet from "../ModalRental/ModalCompleteSet";
 import ModalRental from "../ModalRental/ModalRental";
+import { ButtonClose, ButtonRental } from "./Modal.styled";
+import { MdOutlineClose } from "react-icons/md";
 
 Modal.setAppElement("#root");
 
@@ -62,17 +64,19 @@ export default function ModalBox({ state, forClose, data, city, country }) {
                     height: "752px",
                     backgroundColor: "white",
                 }}>
-                <button style={{ position: "absolute", top: "16px", right: "16px" }} type="button" onClick={forClose}>
-                    x
-                </button>
-                <img
-                    style={{ borderRadius: "14px", objectFit: "cover" }}
-                    src={img || photoLink || DefaultCar}
-                    alt={`${make} ${model}`}
-                    width="100%"
-                    height="248px"
-                    loading="lazy"
-                />
+                <ButtonClose type="button" onClick={forClose}>
+                    <MdOutlineClose />
+                </ButtonClose>
+                <div style={{ backgroundColor: "#F3F3F2", borderRadius: "14px" }}>
+                    <img
+                        style={{ borderRadius: "14px", objectFit: "cover" }}
+                        src={img || photoLink || DefaultCar}
+                        alt={`${make} ${model}`}
+                        width="100%"
+                        height="248px"
+                        loading="lazy"
+                    />
+                </div>
                 <h3>
                     {make} <span>{model}</span>, {year}
                 </h3>
@@ -93,7 +97,7 @@ export default function ModalBox({ state, forClose, data, city, country }) {
                 <h4>Rental Conditions:</h4>
                 <ModalRental conditions={rentalConditions} price={rentalPrice} mileage={mileage} />
 
-                <a href="tel:+380730000000">Rental car</a>
+                <ButtonRental href="tel:+380730000000">Rental car</ButtonRental>
             </div>
         </Modal>
     );

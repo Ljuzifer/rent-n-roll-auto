@@ -11,5 +11,3 @@ export const fetchAllCars = createAsyncThunk("cars/getAll", async (_, thunkAPI) 
         return thunkAPI.rejectWithValue(e.message);
     }
 });
-
-fetchAllCars();
