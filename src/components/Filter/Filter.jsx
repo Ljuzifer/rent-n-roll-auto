@@ -33,7 +33,7 @@ export default function Filter({ cars }) {
     const ownBrands = useCreateOwnMakes(cars, "make");
     const brandOptions = [...ownBrands.map((brand) => ({ value: brand, label: brand }))];
     const priceOptions = [
-        ...[...Array(30)].map((_, i) => ({
+        ...[...Array(50)].map((_, i) => ({
             label: `${(i + 1) * 10}`,
             value: (i + 1) * 10,
         })),
