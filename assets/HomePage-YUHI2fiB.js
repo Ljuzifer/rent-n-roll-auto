@@ -1,4 +1,4 @@
-import{s as t,j as e,S as n,M as a}from"./index-_0fY2oK9.js";const i=t.div`
+import{s as t,j as e,S as n,M as a}from"./index-TFkWdTt0.js";const i=t.div`
     font-weight: 500;
     font-size: 55px;
     letter-spacing: -13px;
