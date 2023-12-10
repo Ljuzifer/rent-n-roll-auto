@@ -12,7 +12,12 @@ export default function Layout() {
     return (
         <>
             <AppHeader />
-            <Suspense fallback={<LoadingSpinnerComponent type={"Gear"} color={"blue"} size={"220px"} />}>
+            <Suspense
+                fallback={
+                    <div style={{ marginTop: "150px" }}>
+                        <LoadingSpinnerComponent type={"Gear"} color={"blue"} size={"220px"} />
+                    </div>
+                }>
                 <Outlet />
                 {!isLoading && <Footer />}
             </Suspense>
