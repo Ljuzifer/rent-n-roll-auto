@@ -5,18 +5,11 @@ import AppHeader from "./AppHeader/AppHeader";
 
 export default function Layout() {
     return (
-        <div>
+        <>
             <AppHeader />
-            <Suspense
-                fallback={
-                    <LoadingSpinnerComponent
-                        type={"Gear"}
-                        color={"blue"}
-                        size={"220px"}
-                    />
-                }>
+            <Suspense fallback={<LoadingSpinnerComponent type={"Gear"} color={"blue"} size={"220px"} />}>
                 <Outlet />
             </Suspense>
-        </div>
+        </>
     );
 }

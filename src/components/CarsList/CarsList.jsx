@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SectionContainer } from "../../GlobalStyle";
 // import { useSelector } from "react-redux";
 // import { selectCars } from "../../redux/cars/carsSelectors";
 import { carsNumerator } from "../../utils/numerosityHelper";
@@ -16,19 +17,23 @@ export default function CarsList({ catalog }) {
 
     return (
         <>
-            <ul style={{ display: "flex", flexWrap: "wrap", columnGap: "29px", rowGap: "50px" }}>
-                {carsNumerator(catalog, shownCars).map((car) => (
-                    <li key={car.id}>
-                        <CarsItem car={car} />
-                    </li>
-                ))}
-            </ul>
-            {catalog?.length > shownCars && <LoadButton loadMore={loadMore} />}
+            <SectionContainer>
+                <ul style={{ display: "flex", flexWrap: "wrap", columnGap: "29px", rowGap: "50px" }}>
+                    {carsNumerator(catalog, shownCars).map((car) => (
+                        <li key={car.id}>
+                            <CarsItem car={car} />
+                        </li>
+                    ))}
+                </ul>
+                {catalog?.length > shownCars && <LoadButton loadMore={loadMore} />}
+            </SectionContainer>
 
             {catalog.length === 0 && (
-                <div>
-                    <b>Cars Not Found 😊 Try another options.</b>
-                </div>
+                <SectionContainer>
+                    <div>
+                        <b>Cars Not Found 😊 Try another options.</b>
+                    </div>
+                </SectionContainer>
             )}
         </>
     );

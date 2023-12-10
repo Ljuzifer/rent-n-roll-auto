@@ -26,6 +26,7 @@
         "react-router-dom": "^6.20.1",
         "react-select": "^5.8.0",
         "react-spinners-components": "^2.0.4",
+        "react-svg": "^16.1.31",
         "redux-persist": "^6.0.0",
         "styled-components": "^6.1.1"
     },

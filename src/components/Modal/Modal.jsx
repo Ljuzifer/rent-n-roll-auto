@@ -2,7 +2,15 @@ import Modal from "react-modal";
 import DefaultCar from "../../imgs/default-car.jpg";
 import CompleteSet from "../ModalRental/ModalCompleteSet";
 import ModalRental from "../ModalRental/ModalRental";
-import { ButtonClose, ButtonRental } from "./Modal.styled";
+import {
+    ButtonClose,
+    ButtonRental,
+    FunctionsDiv,
+    ImageDiv,
+    MainModalDiv,
+    RentalWrapDiv,
+    ShortInfoDiv,
+} from "./Modal.styled";
 import { MdOutlineClose } from "react-icons/md";
 
 Modal.setAppElement("#root");
@@ -55,50 +63,36 @@ export default function ModalBox({ state, forClose, data, city, country }) {
 
     return (
         <Modal isOpen={state} onRequestClose={forClose} style={customStyles}>
-            <div
-                style={{
-                    border: "2px",
-                    borderRadius: "24px",
-                    padding: "40px",
-                    width: "541px",
-                    height: "752px",
-                    backgroundColor: "white",
-                }}>
+            <MainModalDiv>
                 <ButtonClose type="button" onClick={forClose}>
                     <MdOutlineClose />
                 </ButtonClose>
-                <div style={{ backgroundColor: "#F3F3F2", borderRadius: "14px" }}>
-                    <img
-                        style={{ borderRadius: "14px", objectFit: "cover" }}
-                        src={img || photoLink || DefaultCar}
-                        alt={`${make} ${model}`}
-                        width="100%"
-                        height="248px"
-                        loading="lazy"
-                    />
-                </div>
+                <ImageDiv>
+                    <img src={img || photoLink || DefaultCar} alt={`${make} ${model}`} loading="lazy" />
+                </ImageDiv>
                 <h3>
                     {make} <span>{model}</span>, {year}
                 </h3>
-                <div>
+                <ShortInfoDiv>
                     <p>
                         {city} | {country} | Id: {id} | Year: {year} | Type: {type}
                     </p>
                     <p>
                         Fuel Consumption: {fuelConsumption} | Engine Size: {engineSize}
                     </p>
-                </div>
+                </ShortInfoDiv>
                 <p>{description}</p>
                 <h4>Accessories and functionalities:</h4>
-                <div>
+                <FunctionsDiv>
                     <CompleteSet set={accessories} />
                     <CompleteSet set={functionalities} />
-                </div>
+                </FunctionsDiv>
                 <h4>Rental Conditions:</h4>
                 <ModalRental conditions={rentalConditions} price={rentalPrice} mileage={mileage} />
-
-                <ButtonRental href="tel:+380730000000">Rental car</ButtonRental>
-            </div>
+                <RentalWrapDiv>
+                    <ButtonRental href="tel:+380730000000">Rental car</ButtonRental>
+                </RentalWrapDiv>
+            </MainModalDiv>
         </Modal>
     );
 }

@@ -6,7 +6,6 @@ import App from "./App";
 import { persistor, store } from "./redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import LoadingSpinnerComponent from "react-spinners-components";
-// import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>

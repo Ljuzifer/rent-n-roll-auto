@@ -5,7 +5,7 @@ import CarsItem from "../components/CarsItem/CarsItem";
 import { selectFavorites, selectFilter } from "../redux/cars/carsSelectors";
 import { setFilter } from "../redux/cars/carsSlice";
 import { autoFiltration } from "../utils/filterHelper";
-import { SectionContainer } from "../GlobalStyle";
+import { MainContainer, SectionContainer } from "../GlobalStyle";
 
 export default function FavoritesPage() {
     const dispatch = useDispatch();
@@ -19,7 +19,7 @@ export default function FavoritesPage() {
     }, [dispatch]);
 
     return (
-        <main>
+        <MainContainer>
             {favorites.length > 0 ? <Filter cars={choisenAutos} /> : <b>NO CHOISEN AUTOS</b>}
             <SectionContainer>
                 <ul style={{ display: "flex", flexWrap: "wrap", columnGap: "29px", rowGap: "50px" }}>
@@ -38,6 +38,6 @@ export default function FavoritesPage() {
                     </div>
                 </SectionContainer>
             )}
-        </main>
+        </MainContainer>
     );
 }

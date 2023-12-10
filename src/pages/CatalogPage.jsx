@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import LoadingSpinnerComponent from "react-spinners-components";
 import CarsList from "../components/CarsList/CarsList";
 import Filter from "../components/Filter/Filter";
+import { MainContainer } from "../GlobalStyle";
 import { selectCars, selectFilter, selectIsLoading } from "../redux/cars/carsSelectors";
 import { setFilter } from "../redux/cars/carsSlice";
 import { fetchAllCars } from "../redux/cars/carsThunk";
@@ -25,10 +26,13 @@ export default function CatalogPage() {
     }, [dispatch]);
 
     return (
-        <>
-            {isLoading && <LoadingSpinnerComponent type={"Gear"} color={"blue"} size={"220px"} />}
-            <Filter cars={choisenAutos} />
-            {catalog.length !== 0 && <CarsList catalog={choisenAutos} />}
-        </>
+        <MainContainer>
+            {isLoading ? (
+                <LoadingSpinnerComponent type={"Gear"} color={"blue"} size={"220px"} />
+            ) : (
+                <Filter cars={choisenAutos} />
+            )}
+            {catalog.length !== 0 && !isLoading && <CarsList catalog={choisenAutos} />}
+        </MainContainer>
     );
 }

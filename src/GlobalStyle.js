@@ -27,7 +27,7 @@ body {
   margin: 0;
   background-color: white;
   color: rgba(18, 20, 23, 1);
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
@@ -79,8 +79,9 @@ export const SectionContainer = styled.section`
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 28px;
-    /* margin-left: auto;
-    margin-right: auto;
-    padding-left: 128px;
-    padding-right: 128px; */
+`;
+
+export const MainContainer = styled.main`
+    padding-top: 113px;
+    padding-bottom: 22px;
 `;

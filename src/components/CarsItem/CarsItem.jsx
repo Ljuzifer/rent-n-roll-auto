@@ -6,7 +6,7 @@ import { selectFavorites } from "../../redux/cars/carsSelectors";
 import ModalBox from "../Modal/Modal";
 import auto from "../../imgs/default-car.jpg";
 import { FiHeart } from "react-icons/fi";
-import { AutoThumb, IconHeart, ImageThumb } from "./CarsItem.styled";
+import { AutoThumb, ButtonLearn, IconHeart, ImageThumb, InfoThumb, TitleThumb } from "./CarsItem.styled";
 
 export default function CarsItem({ car }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,29 +53,27 @@ export default function CarsItem({ car }) {
                         width="100%"
                         height="100%"
                         loading="lazy"
-                        // onError={(e) => {
-                        //     e.target.src = { auto };
-                        //     e.target.alt = `${make} ${model}`;
-                        // }}
                     />
                 </ImageThumb>
-                <div>
+                <TitleThumb>
                     <h3>
                         {make} <span>{model}</span>, {year}
                     </h3>
-                    <p>{rentalPrice}</p>
-                </div>
-                <div>
-                    <p>
-                        {city} | {country} | {rentalCompany}
-                    </p>
-                    <p>
-                        {type} | {model} | {id} | {short}
-                    </p>
-                    <button type="button" onClick={openModal}>
-                        Learn more
-                    </button>
-                </div>
+                    <h3>{rentalPrice}</h3>
+                </TitleThumb>
+                <InfoThumb>
+                    <div>
+                        <p>
+                            {city} | {country} | {rentalCompany}
+                        </p>
+                        <p>
+                            {type} | {model} | {id} | {short}
+                        </p>
+                    </div>
+                </InfoThumb>
+                <ButtonLearn type="button" onClick={openModal}>
+                    Learn more
+                </ButtonLearn>
             </AutoThumb>
 
             <ModalBox state={isModalOpen} forClose={closeModal} data={car} city={city} country={country} />
