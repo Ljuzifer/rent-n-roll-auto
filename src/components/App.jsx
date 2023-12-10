@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import Layout from "./components/Layout";
-import HomePage from "./pages/HomePage";
-import CatalogPage from "./pages/CatalogPage";
-import FavoritesPage from "./pages/FavoritesPage";
-import { GlobalStyle } from "./GlobalStyle";
+import Layout from "./Layout";
+import HomePage from "../pages/HomePage";
+import CatalogPage from "../pages/CatalogPage";
+import FavoritesPage from "../pages/FavoritesPage";
+import { GlobalStyle } from "../GlobalStyle";
 
 export default function App() {
     return (
