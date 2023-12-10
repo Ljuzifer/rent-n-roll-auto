@@ -1,5 +1,4 @@
 import Modal from "react-modal";
-import DefaultCar from "../../imgs/default-car.jpg";
 import CompleteSet from "../ModalRental/ModalCompleteSet";
 import ModalRental from "../ModalRental/ModalRental";
 import {
@@ -69,7 +68,7 @@ export default function ModalBox({ state, forClose, data, city, country }) {
                     <MdOutlineClose />
                 </ButtonClose>
                 <ImageDiv auto={auto}>
-                    <img src={img || photoLink || DefaultCar} alt={`${make} ${model}`} loading="lazy" />
+                    <img src={img || photoLink} alt={`${make} ${model}`} loading="lazy" />
                 </ImageDiv>
                 <h3>
                     {make} <span>{model}</span>, {year}

@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { SectionContainer } from "../../GlobalStyle";
-// import { useSelector } from "react-redux";
-// import { selectCars } from "../../redux/cars/carsSelectors";
 import { carsNumerator } from "../../utils/numerosityHelper";
 import CarsItem from "../CarsItem/CarsItem";
 import LoadButton from "../LoadButton/LoadButton";

@@ -7,7 +7,8 @@ export const HeroDiv = styled.div`
     width: 100%;
     height: 666px;
     background-color: grey;
-    background-image: url(${(props) => props.font});
+    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.4), rgba(46, 47, 66, 0.4)),
+        url(${(props) => props.font});
     background-size: cover;
     background-position: center;
     border-radius: 22px;

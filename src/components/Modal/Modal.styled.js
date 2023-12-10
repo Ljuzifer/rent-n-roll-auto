@@ -44,8 +44,8 @@ export const MainModalDiv = styled.div`
 `;
 
 export const ImageDiv = styled.div`
-    background-color: #f3f3f2;
     background-image: url(${(props) => props.auto});
+    background-color: #f3f3f2;
     border-radius: 14px;
     margin-bottom: 14px;
 
