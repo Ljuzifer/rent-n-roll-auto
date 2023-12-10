@@ -264,7 +264,8 @@ a {
     color: white;
     text-align: center;
     background-color: rgba(52, 112, 255, 1);
-    background-image: url(${e=>e.img});
+    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.4), rgba(46, 47, 66, 0.4)),
+        url(${e=>e.img});
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.8);
 
     p {
@@ -462,7 +463,7 @@ https://fb.me/react-async-component-lifecycle-hooks`)}if(typeof e.getDerivedStat
     height: 426px;
 `,PP=ue.div`
     position: relative;
-    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.4), rgba(46, 47, 66, 0.4)),
         url(${e=>e.default});
     width: 274px;
     height: 268px;
