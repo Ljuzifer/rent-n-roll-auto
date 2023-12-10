@@ -42,6 +42,7 @@ export const PartHeroDiv = styled.div`
     color: white;
     text-align: center;
     background-color: rgba(52, 112, 255, 1);
+    background-image: url(${(props) => props.img});
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.8);
 
     p {
@@ -49,9 +50,20 @@ export const PartHeroDiv = styled.div`
     }
 
     h3 {
+        height: 100px;
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: 900;
+        font-size: 28px;
+        text-shadow: 8px 8px 18px rgba(255, 255, 255, 0.9);
+
+        p {
+            font-size: 13px;
+        }
+
         &:hover,
         &:focus {
             color: rgba(11, 68, 205, 1);
+            text-shadow: 8px 8px 18px rgba(0, 0, 0, 1);
         }
     }
 `;

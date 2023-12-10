@@ -9,6 +9,7 @@ export const AutoThumb = styled.div`
 
 export const ImageThumb = styled.div`
     position: relative;
+    background-image: url(${(props) => props.auto});
     background-color: beige;
     width: 274px;
     height: 268px;

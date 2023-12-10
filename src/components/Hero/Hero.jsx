@@ -1,6 +1,7 @@
 import { SectionContainer } from "../../GlobalStyle";
 import { HeroDiv, PartHeroDiv } from "./Hero.styled";
 import hero from "../../imgs/cars_1.webp";
+import font from "../../imgs/hero-font.jpg";
 
 export default function Hero() {
     return (
@@ -44,11 +45,11 @@ export default function Hero() {
                 </p>
             </PartHeroDiv>
 
-            <PartHeroDiv>
+            <PartHeroDiv img={font}>
                 <h3>
                     <a href="tel:+380730000000">Contact Us</a>
+                    <p>Have questions or ready to book a car? Contact our team for assistance.</p>
                 </h3>
-                <p>Have questions or ready to book a car? Contact our team for assistance.</p>
             </PartHeroDiv>
         </SectionContainer>
     );

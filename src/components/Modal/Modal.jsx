@@ -12,6 +12,7 @@ import {
     ShortInfoDiv,
 } from "./Modal.styled";
 import { MdOutlineClose } from "react-icons/md";
+import auto from "../../imgs/default.webp";
 
 Modal.setAppElement("#root");
 
@@ -67,7 +68,7 @@ export default function ModalBox({ state, forClose, data, city, country }) {
                 <ButtonClose type="button" onClick={forClose}>
                     <MdOutlineClose />
                 </ButtonClose>
-                <ImageDiv>
+                <ImageDiv auto={auto}>
                     <img src={img || photoLink || DefaultCar} alt={`${make} ${model}`} loading="lazy" />
                 </ImageDiv>
                 <h3>

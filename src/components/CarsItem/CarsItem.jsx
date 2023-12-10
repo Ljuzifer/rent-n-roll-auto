@@ -48,11 +48,12 @@ export default function CarsItem({ car }) {
                         />
                     </IconHeart>
                     <img
-                        src={img || photoLink || auto}
+                        src={img || photoLink}
                         alt={`${make} ${model}`}
                         width="100%"
                         height="100%"
                         loading="lazy"
+                        default={auto}
                     />
                 </ImageThumb>
                 <TitleThumb>
