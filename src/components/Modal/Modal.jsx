@@ -25,7 +25,7 @@ const customStyles = {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "rgba(0, 0, 0, 0.8)",
+        backgroundColor: "rgba(18, 20, 23, 0.50)",
         zIndex: 6666,
         overflow: "auto",
     },
