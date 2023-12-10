@@ -9,7 +9,7 @@ export const AutoThumb = styled.div`
 
 export const ImageThumb = styled.div`
     position: relative;
-    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.4), rgba(46, 47, 66, 0.4)),
         url(${(props) => props.default});
     width: 274px;
     height: 268px;

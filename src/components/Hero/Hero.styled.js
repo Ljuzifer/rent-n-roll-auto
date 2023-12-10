@@ -43,7 +43,8 @@ export const PartHeroDiv = styled.div`
     color: white;
     text-align: center;
     background-color: rgba(52, 112, 255, 1);
-    background-image: url(${(props) => props.img});
+    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.4), rgba(46, 47, 66, 0.4)),
+        url(${(props) => props.img});
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.8);
 
     p {
