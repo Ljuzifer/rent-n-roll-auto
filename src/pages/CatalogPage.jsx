@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import LoadingSpinnerComponent from "react-spinners-components";
 import CarsList from "../components/CarsList/CarsList";
 import Filter from "../components/Filter/Filter";
 import { MainContainer } from "../GlobalStyle";
@@ -27,11 +26,7 @@ export default function CatalogPage() {
 
     return (
         <MainContainer>
-            {isLoading ? (
-                <LoadingSpinnerComponent type={"Gear"} color={"blue"} size={"220px"} />
-            ) : (
-                <Filter cars={choisenAutos} />
-            )}
+            <Filter cars={choisenAutos} />
             {catalog.length !== 0 && !isLoading && <CarsList catalog={choisenAutos} />}
         </MainContainer>
     );
