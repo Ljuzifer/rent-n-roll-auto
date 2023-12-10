@@ -1,12 +1,12 @@
 # Rent'N'Roll Auto
 
-This is a simple car rental application built with Vite + React. It allows users to browse a catalog of cars available
-for rent, add cars to their favorites, and view detailed information about each car. The application also includes
-filtering options to help users find cars that match their preferences.
+Welcome to Rent'N'Roll Auto, your go-to destination for reliable and affordable car rentals.
 
 ---
 
-Welcome to Rent'N'Roll Auto, your go-to destination for reliable and affordable car rentals.
+This is a simple car rental application built with Vite + React. It allows users to browse a catalog of cars available
+for rent, add cars to their favorites, and view detailed information about each car. The application also includes
+filtering options to help users find cars that match their preferences.
 
 ---
 
