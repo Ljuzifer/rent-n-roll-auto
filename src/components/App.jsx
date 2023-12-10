@@ -6,6 +6,7 @@ import { GlobalStyle } from "../GlobalStyle";
 const Home = lazy(() => import("../pages/HomePage"));
 const Catalog = lazy(() => import("../pages/CatalogPage"));
 const Favorites = lazy(() => import("../pages/FavoritesPage"));
+const Empty = lazy(() => import("../pages/NotFound"));
 
 export default function App() {
     return (
@@ -15,6 +16,7 @@ export default function App() {
                     <Route index element={<Home />} />
                     <Route path="/catalog" element={<Catalog />} />
                     <Route path="/favorites" element={<Favorites />} />
+                    <Route path="*" element={<Empty />} />
                 </Route>
             </Routes>
             <GlobalStyle />
