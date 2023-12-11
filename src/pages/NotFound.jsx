@@ -8,7 +8,7 @@ export default function NotFound() {
                     textAlign: "center",
                     marginLeft: "auto",
                     marginRight: "auto",
-                    height: "100vh",
+                    height: "calc(100vh - 38px)",
                     paddingTop: 200,
                 }}>
                 <h1 style={{ fontSize: 120 }}>404</h1>
