@@ -12,7 +12,7 @@ export default function NotFound() {
                     paddingTop: 200,
                 }}>
                 <h1 style={{ fontSize: 120 }}>404</h1>
-                <b style={{ fontSize: 28 }}>Sorry, we couldn`t find that page...</b>
+                <b style={{ fontSize: 28, color: "rgba(11, 68, 205, 1)" }}>Sorry, we couldn`t find that page...</b>
             </div>
         </SectionContainer>
     );

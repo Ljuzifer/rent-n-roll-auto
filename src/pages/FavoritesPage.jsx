@@ -33,8 +33,10 @@ export default function FavoritesPage() {
 
             {choisenAutos?.length === 0 && (
                 <SectionContainer>
-                    <div>
-                        <b>Cars Not Found 😊 Try another options.</b>
+                    <div style={{ height: "100vh" }}>
+                        <b style={{ display: "flex", justifyContent: "center" }}>
+                            Oops...! Cars Not Found 😊 Try another options.
+                        </b>
                     </div>
                 </SectionContainer>
             )}
