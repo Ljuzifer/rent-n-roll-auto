@@ -12,7 +12,7 @@ filtering options to help users find cars that match their preferences.
 
 ## Promo
 
-[RentCars - Your Ultimate Car Rental Solution! Explore a wide range of rental cars, stay organized, and boost your travel experience with RentCars.](https://ljuzifer.github.io/rent-n-roll-auto/)
+[Rent'n'Roll - Your Ultimate Car Rental Solution! Explore a wide range of rental cars, stay organized, and boost your travel experience with RentCars.](https://ljuzifer.github.io/rent-n-roll-auto/)
 
 ---
 
@@ -54,13 +54,7 @@ To get started with the project, follow these steps:
 
 5. Open your web browser and navigate to `http://localhost:5173/rent-n-roll-auto` to access the application.
 
-### Usage
-
--   Browse the catalog of cars on the home page.
--   Use the filters to narrow down your search based on make, rental price, and mileage. - Click the heart icon to add a
-    car to your favorites.
--   Click the "Learn more" button to view detailed information about a car.
--   Contact the rental company by clicking the "Rental car" link.
+---
 
 ### Technologies
 
@@ -76,6 +70,8 @@ To get started with the project, follow these steps:
 -   Styled-Components
 -   MockAPI for data
 -   Vite
+
+---
 
 ### Contributing
 
