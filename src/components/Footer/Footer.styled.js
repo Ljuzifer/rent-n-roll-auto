@@ -7,4 +7,5 @@ export const FooterBlock = styled.footer`
     color: #fff;
     text-align: center;
     padding: 10px;
+    margin-top: auto;
 `;

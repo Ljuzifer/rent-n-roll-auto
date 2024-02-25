@@ -20,24 +20,25 @@ export default function FavoritesPage() {
 
     return (
         <MainContainer>
-            {favorites.length > 0 ? <Filter cars={choisenAutos} /> : <b>NO CHOISEN AUTOS</b>}
-            <SectionContainer>
-                <ul style={{ display: "flex", flexWrap: "wrap", columnGap: "29px", rowGap: "50px" }}>
-                    {choisenAutos.map((car) => (
-                        <li key={car.id}>
-                            <CarsItem car={car} />
-                        </li>
-                    ))}
-                </ul>
-            </SectionContainer>
+            {favorites?.length > 0 ? <Filter cars={choisenAutos} /> : null}
 
-            {choisenAutos?.length === 0 && (
+            {choisenAutos?.length === 0 ? (
                 <SectionContainer>
-                    <div style={{ height: "100vh" }}>
-                        <b style={{ display: "flex", justifyContent: "center" }}>
-                            Oops...! Cars Not Found 😊 Try another options.
+                    <div style={{ height: "calc(100vh - 175px)" }}>
+                        <b style={{ display: "flex", justifyContent: "center", fontSize: "44px" }}>
+                            Oops...! Cars Not Found At Favorites List 😊
                         </b>
                     </div>
+                </SectionContainer>
+            ) : (
+                <SectionContainer>
+                    <ul style={{ display: "flex", flexWrap: "wrap", columnGap: "29px", rowGap: "50px" }}>
+                        {choisenAutos.map((car) => (
+                            <li key={car.id}>
+                                <CarsItem car={car} />
+                            </li>
+                        ))}
+                    </ul>
                 </SectionContainer>
             )}
         </MainContainer>
